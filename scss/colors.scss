@@ -1,0 +1,136 @@
+:root {
+  --saturation-factor: 1;
+
+  --dc-green: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);
+  --dc-blurple: #5865f2;
+  --dc-black: #23272a;
+  --dc-red: #ed4345;
+  --dc-fuchsia: #eb459e;
+
+  --dc-green-hover: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 33.3%);
+  --dc-blurple-hover: hsl(235, calc(var(--saturation-factor, 1) * 51.4%), 52.4%);
+  --dc-red-hover: hsl(359, calc(var(--saturation-factor, 1) * 56.7%), 48%);
+
+  --dc-green-active: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 25%);
+  --dc-blurple-active: hsl(235, calc(var(--saturation-factor, 1) * 46.7%), 44.1%);
+  --dc-red-active: hsl(359, calc(var(--saturation-factor, 1) * 56.3%), 40.4%);
+  
+  --dc-green-ol-active: rgba(59, 165, 93, 0.1);
+  --dc-blurple-ol-active: rgba(88, 101, 242, 0.1);
+  --dc-red-ol-active: rgba(237, 67, 69, 0.1);
+  //hsla(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%, 0.1);
+
+  --dc-header-primary: #fff;
+  --dc-header-secondary: #b9bbbe;
+  --dc-text-normal: #dcddde;
+  --dc-text-muted: #72767d;
+  --dc-text-link: hsl(197, calc(var(--saturation-factor, 1) * 100%), 47.8%);
+  --dc-text-link-low-saturation: hsl(197, calc(var(--saturation-factor, 1) * 100%), 52.9%);
+  --dc-text-positive: hsl(139, calc(var(--saturation-factor, 1) * 66.8%), 58.6%);
+  --dc-text-warning: hsl(38, calc(var(--saturation-factor, 1) * 95.7%), 54.1%);
+  --dc-text-danger: hsl(359, calc(var(--saturation-factor, 1) * 82.6%), 59.4%);
+  --dc-text-brand: hsl(235, calc(var(--saturation-factor, 1) * 86.1%), 77.5%);
+
+  --dc-interactive-normal: #b9bbbe;
+  --dc-interactive-hover: #dcddde;
+  --dc-interactive-active: #fff;
+  --dc-interactive-muted: #4f545c;
+
+  --dc-background-primary: #36393f;
+  --dc-background-secondary: #2f3136;
+  --dc-background-secondary-alt: #292b2f;
+  --dc-background-tertiary: #202225;
+  --dc-background-accent: #4f545c;
+  --dc-background-floating: #18191c;
+
+  --dc-background-modifier-hover: rgba(79, 84, 92, 0.16);
+  --dc-background-modifier-active: rgba(79, 84, 92, 0.24);
+  --dc-background-modifier-selected: rgba(79, 84, 92, 0.32);
+  --dc-background-modifier-accent: hsla(0, 0%, 100%, 0.06);
+  --dc-channels-default: #8e9297;
+
+  --dc-activity-card-background: #202225;
+  --dc-deprecated-card-bg: rgba(32, 34, 37, 0.6);
+  --dc-deprecated-card-editable-bg: rgba(32, 34, 37, 0.3);
+  --dc-deprecated-text-input-bg: rgba(0, 0, 0, 0.1);
+  --dc-deprecated-text-input-border: rgba(0, 0, 0, 0.3);
+  --dc-deprecated-text-input-border-hover: #040405;
+  --dc-deprecated-text-input-border-disabled: #202225;
+  --dc-deprecated-text-input-prefix: #dcddde;
+}
+
+$test: hsl(139, calc(var(--saturation-factor, 1) * 47.3%), 43.9%);
+@mixin background-opacity($color, $opacity) {
+  // background: $color;
+  background: rgba(unquote($color), $opacity);
+}
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+.dc.green {
+  color: var(--dc-green);
+}
+
+.dc.red {
+  color: var(--dc-red);
+}
+
+.dc.blurple {
+  color: var(--dc-blurple);
+}
+
+.dc.bg.green {
+  background-color: var(--dc-green);
+  &:where(button) {
+    &:hover {
+      background-color: var(--dc-green-hover);
+    }
+    &:active {
+      background-color: var(--dc-green-active);
+    }
+  }
+}
+.dc.bg.red {
+  background-color: var(--dc-red);
+  &:where(button) {
+    &:hover {
+      background-color: var(--dc-red-hover);
+    }
+    &:active {
+      background-color: var(--dc-red-active);
+    }
+  }
+}
+.dc.bg.blurple {
+  background-color: var(--dc-blurple);
+  &:where(button) {
+    &:hover {
+      background-color: var(--dc-blurple-hover);
+    }
+    &:active {
+      background-color: var(--dc-blurple-active);
+    }
+  }
+}
+
+.dc.ol.green {
+  border: solid 1px var(--dc-green);
+  &:where(button):active {
+    background-color: var(--dc-green-ol-active);
+  }
+}
+
+.dc.ol.red {
+  border: solid 1px var(--dc-red);
+  &:where(button):active {
+    background-color: var(--dc-red-ol-active);
+  }
+}
+
+.dc.ol.blurple {
+  border: solid 1px var(--dc-blurple);
+  &:where(button):active {
+    background-color: var(--dc-blurple-ol-active);
+  }
+}

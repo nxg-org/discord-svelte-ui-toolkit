@@ -1,0 +1,48 @@
+:root {
+  --dc-font-primary: Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --dc-font-display: Ginto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --dc-font-code: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+}
+
+.dc, .dc {
+  text-rendering: optimizeLegibility;
+  font-family: var(--dc-font-primary);
+}
+
+.whitney {
+  font-family: var(--dc-font-primary);
+}
+.ginto {
+  font-family: var(--dc-font-display);
+}
+
+@font-face {
+  font-family: Whitney;
+  src: url('../fonts/Whitney400.woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Whitney;
+  src: url('../fonts/Whitney500.woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: Whitney;
+  src: url('../fonts/Whitney600.woff');
+  font-weight: 600;
+}
+@font-face {
+  font-family: Whitney;
+  src: url('../fonts/Whitney700.woff');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Ginto;
+  src: url('../fonts/Ginto600.woff');
+  font-weight: 600;
+}
+@font-face {
+  font-family: Ginto;
+  src: url('../fonts/Ginto700.woff');
+  font-weight: 700;
+}

@@ -1,0 +1,15 @@
+// This is the main scss file which is needed to get the other stuff working.
+// To use this put the following snippet in the main svelte file:
+//
+// <svelte:head>
+//   <style src="./discord/discord.scss"></style>
+// </svelte:head>
+
+@use "./scss/fonts.scss";
+@use "./scss/buttons.scss";
+@use "./scss/colors.scss";
+@use "./scss/headings.scss";
+@use "./scss/input.scss";
+@use "./scss/scrollbar.scss";
+@use "./scss/settings.scss";
+@use "./scss/alignment.scss";
