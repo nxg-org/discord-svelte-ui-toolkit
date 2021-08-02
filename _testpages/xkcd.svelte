@@ -44,6 +44,8 @@
     {#if resp.transcript != ''}
       <h5 class="dc">transcript</h5>
       <p class="dc" style="color: white;">{@html resp.transcript.replaceAll('[[', '<em>').replaceAll(']]', '</em>').replaceAll('\n', '<br />')}</p>
+    {:else}
+      <p class="dc" style="color: white;">{`{{Title text: ${resp.alt}}}`}</p>
     {/if}
   {:catch}
     <div class="dc horizontal">
