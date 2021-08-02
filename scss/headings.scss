@@ -40,6 +40,11 @@ h5.dc {
 p.dc {
   margin-top: 0;
   margin-bottom: 8px;
+  color: var(--dc-header-secondary);
+}
+label.dc {
+  margin-top: 0;
+  margin-bottom: 8px;
   user-select: none;
   color: var(--dc-header-secondary);
 }

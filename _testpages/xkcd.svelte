@@ -30,13 +30,16 @@
 
 {#if req}
   {#await req}
-    <p class="dc">Loading...</p>
+    <div class="dc horizontal">
+      <button class="dc bg" on:click={() => (num = Math.floor(Math.random() * latest))}>Random</button>
+      <p class="dc" style="margin-top: auto;">Loading...</p>
+    </div>
   {:then resp}
     <div class="dc horizontal">
-      <h1 class="dc title">{resp.title}</h1>
+      <button class="dc bg" on:click={() => (num = Math.floor(Math.random() * latest))} style="width: auto;">Random</button>
+      <h1 class="dc title" style="margin-top: auto;">{resp.title}</h1>
       <h5 class="dc" style="margin-top: auto;">{resp.day}.{resp.month}.{resp.year}</h5>
     </div>
-    <!-- <h5 class="dc">{resp.alt}</h5> -->
     <img src={resp.img} alt="XKCD#{resp.num}" title={resp.alt} />
     {#if resp.transcript != ''}
       <h5 class="dc">transcript</h5>
@@ -44,10 +47,9 @@
     {/if}
   {:catch}
     <div class="dc horizontal">
+      <button class="dc bg" on:click={() => (num = Math.floor(Math.random() * latest))} style="width: auto;">Random</button>
       <button class="dc">XKCD not found</button>
       <button class="dc ul" on:click={() => (num = undefined)}>Load latest instead</button>
     </div>
   {/await}
-{:else}
-  Please input an xkcd to load.
 {/if}
