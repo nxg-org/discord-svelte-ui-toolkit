@@ -33,6 +33,7 @@ button.dc {
   min-width: 96px;
   min-height: 32px;
   background: none;
+  flex-shrink: 0;
 
   &.ol {
     border: solid 1px #fff;

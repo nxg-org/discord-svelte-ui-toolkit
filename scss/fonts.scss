@@ -4,7 +4,25 @@
   --dc-font-code: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
 }
 
-.dc, .dc {
+code.dc {
+  display: block;
+  overflow-x: auto;
+  padding: .5em;
+  border-radius: 4px;
+  color: var(--dc-header-secondary);
+  font-family: var(--dc-font-code);
+  text-size-adjust: none;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  text-indent: 0;
+  white-space: pre-wrap;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dc-background-tertiary) var(--dc-background-secondary);
+  background: var(--dc-background-secondary);
+  border: 1px solid var(--dc-background-tertiary);
+  margin-bottom: 20px;
+}
+.dc {
   text-rendering: optimizeLegibility;
   font-family: var(--dc-font-primary);
 }

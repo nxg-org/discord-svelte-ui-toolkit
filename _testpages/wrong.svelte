@@ -2,26 +2,24 @@
 
 <h5 class="dc">#1 Button without ul, ol or bg class</h5>
 <div class="dc horizontal wrong" style="width: max-content;">
-  <button class="dc">None</button>
-  <button class="dc blurple">of these</button>
-  <button class="dc green">Buttons</button>
+  <button class="dc blurple">None</button>
+  <button class="dc green">of these</button>
   <button class="dc red">have</button>
 </div>
 <div class="dc horizontal correct" style="width: max-content;">
-  <button class="dc ul">ul</button>
-  <button class="dc bg blurple">bg</button>
-  <button class="dc green">or</button>
-  <button class="dc ol red">ol</button>
+  <button class="dc bg blurple"><strong>bg</strong></button>
+  <button class="dc ul green"><strong>ul</strong></button>
+  <button class="dc ol red">or <strong style="padding-left: .25em;">ol</strong></button>
 </div>
 
 <h5 class="dc">#2 Horizontal Input but Buttons not marked with big_btn</h5>
 <div class="dc horizontal wrong">
   <input class="dc" />
-  <button class="dc ol red">not like this</button>
+  <button class="dc ol red">bad</button>
 </div>
 <div class="dc horizontal correct">
   <input class="dc" placeholder="Useful Hint for the User" />
-  <button class="dc ol green">like this</button>
+  <button class="dc ol green">good</button>
 </div>
 
 <h5 class="dc">#3 Divider directly below heading</h5>
